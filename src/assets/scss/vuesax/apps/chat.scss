@@ -1,0 +1,68 @@
+#chat-app {
+    .vs-sidebar--background {
+        position: absolute;
+        z-index: 40000;
+    }
+
+    #chat-list-sidebar,
+    #chat-profile-sidebar {
+        .vs-sidebar {
+            max-width: 270px;
+        }
+    }
+
+    #chat-list-sidebar {
+
+        .chat-scroll-area {
+            position: relative;
+            margin: auto;
+            width: 100%;
+            height: calc(100% - 70px);
+
+            .chat__contact {
+                transition: background-color .1s;
+
+                &:hover {
+                    background-color: #eee;
+                }
+            }
+        }
+    }
+
+
+    .chat__bg {
+        background-color: #DFDBE5;
+
+    }
+
+    .chat-content-area {
+        position: relative;
+
+
+        .chat-content-scroll-area {
+            position: relative;
+            margin: auto;
+            width: 100%;
+            height: calc(100% - 154px);
+
+            .chat__input {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+            }
+        }
+    }
+
+    // MEDIA QUIRIES
+    @screen sm {
+        .user-profile-container .vs-sidebar {
+            @apply w-full
+        }
+    }
+
+    @screen md {
+        .user-profile-container .vs-sidebar {
+            @apply w-1/3;
+        }
+    }
+}
